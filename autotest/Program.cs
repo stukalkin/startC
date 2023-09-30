@@ -163,3 +163,85 @@ public class Answer
         ShowCube(N);
     }
 }*/
+
+int SumNumbers(int num)
+{
+    int sum = 0;
+    
+    for (int i = 1; i <= num; i++)
+    {
+        checked
+        {
+            sum += i;
+        }
+    }
+    
+    return sum;
+}
+
+Console.WriteLine("Введите целое положительное число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int sumNumbers = SumNumbers(number);
+Console.WriteLine($"Сумма чисел от 1 до {number} = {sumNumbers}");
+
+
+
+
+
+
+
+
+
+
+int CountDigit(int num)
+{
+    if (num == 0) return 1;
+    int count = 0;
+    while (num != 0)
+    {
+        num = num / 10;
+        count++;
+    }
+    return count;
+}
+
+
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int result = CountDigit(number);
+Console.WriteLine($"Колличество цифр в числе {result}");
+
+
+
+
+
+
+
+
+
+
+
+
+int[] CreateArray(int size)
+{
+    int[] array = new int[size];
+    Random rnd = new Random();
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = rnd.Next(2);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+
+int[] arr = CreateArray(8);
+PrintArray(arr);
